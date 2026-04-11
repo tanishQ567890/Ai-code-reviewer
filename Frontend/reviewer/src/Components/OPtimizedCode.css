@@ -1,0 +1,84 @@
+.optimized-code {
+  width: 100%;
+}
+
+.optimized-code h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+.code-wrapper {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1.5px solid #2d3748;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  width: 100%;
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2d3748;
+  padding: 12px 18px;
+}
+
+.code-lang-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lang-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4f7ef7;
+}
+
+.code-header .code-lang {
+  font-size: 13px;
+  color: #a0aec0;
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: capitalize;
+}
+
+.copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  background: #4a5568;
+  border: 1px solid #718096;
+  border-radius: 6px;
+  color: #e2e8f0;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.copy-btn:hover {
+  background: #718096;
+  border-color: #a0aec0;
+  color: #fff;
+}
+
+.copy-btn.copied {
+  background: #276749;
+  border-color: #38a169;
+  color: #c6f6d5;
+}
+
+@media (max-width: 600px) {
+  .code-header {
+    padding: 10px 14px;
+  }
+
+  .copy-btn {
+    padding: 5px 12px;
+    font-size: 12px;
+  }
+}
