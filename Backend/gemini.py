@@ -40,9 +40,6 @@ Code to review:
         raw_text = response.text.strip()
         
         print(raw_text)
-        
-        if "optimized_code" in result:
-            result["optimized_code"] = (result["optimized_code"].replace("\\n", "\n").replace("\\t", "\t"))
 
         if raw_text.startswith("```"):
             raw_text = raw_text.split("```")[1]
@@ -52,8 +49,7 @@ Code to review:
 
         result = json.loads(raw_text)
         if "optimized_code" in result:
-              result["optimized_code"] = result["optimized_code"].replace("\\n", "\n")
-              return {"success": True, "data": result}
+            result["optimized_code"] = result["optimized_code"].replace("\\n", "\n").replace("\\t", "\t")
         return {"success": True, "data": result}
 
     except json.JSONDecodeError:

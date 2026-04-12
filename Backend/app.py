@@ -30,12 +30,16 @@ def review():
 
     if not code:
         return jsonify({"error":" no code provided"}),400
-    result = review_code(code,language)
-
-    if not result["success"]:
-        return jsonify({"error":result["error"]}),500
     
-    review_data = result["data"]
+    try:
+        result = review_code(code,language)
+    except Exception as e:
+        return jsonify({"error": f"Failed to review code: {str(e)}"}), 500
+
+    if not result.get("success"):
+        return jsonify({"error": result.get("error", "Unknown error")}), 500
+    
+    review_data = result.get("data", {})
     submission = Submission(
         code_text=code,
         language=language,
