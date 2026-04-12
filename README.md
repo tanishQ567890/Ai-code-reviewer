@@ -16,6 +16,10 @@ Database: SQLite + SQLAlchemy
 AI: Google Gemini 2.0 Flash
 Styling: Plain CSS(component-scoped)
 
+**Architecture**
+
+<img width="716" height="375" alt="Screenshot 2026-04-12 111135" src="https://github.com/user-attachments/assets/b1c27e9b-73db-4d79-b662-57a8d3881b24" />
+
 **Key Technical Decisions**
 
 **1. **Single Gemini prompt for review + optimization****
