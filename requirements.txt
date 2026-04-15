@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 flask==3.0.3
 flask-cors==4.0.1
 flask-sqlalchemy==3.1.1
 google-genai
 python-dotenv==1.0.1
+=======
+flask==3.0.3
+flask-cors==4.0.1
+flask-sqlalchemy==3.1.1
+google-genai
+python-dotenv==1.0.1
+gunicorn == 25.3.0
+>>>>>>> 23ffbfc (updates)
